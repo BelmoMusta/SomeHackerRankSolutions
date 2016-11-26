@@ -13,13 +13,18 @@ import static java.lang.System.in;
 public class Solution {
 
 
-    public static void main(String[] args) throws Exception {
-        BufferedReader br=new BufferedReader(new InputStreamReader(in));
+    public static void main(String[] args)  {
 
-       long qq =  Long.parseLong( br.readLine().trim());
-        while(qq>0){
 
-            Scanner sc = new Scanner(br.readLine());
+
+
+
+//
+        Scanner sc = new Scanner(in);
+        long q = sc.nextLong();
+
+        while(q>0){
+
 
             BigInteger a = new BigInteger(sc.next());
             BigInteger b = new BigInteger(sc.next());
@@ -28,7 +33,7 @@ public class Solution {
             long m = sc.nextLong();
             c=c.exponentiate(k,m);
             System.out.print(c.a+" "+c.b);
-            qq--;
+            q--;
             System.out.println();
         }
 
@@ -69,10 +74,10 @@ public class Solution {
         }
 
         private ComplexNumber Multiply(ComplexNumber c, long m) {
-            BigInteger aa = (a.multiply(c.a).subtract(b.multiply(c.b)));
-            BigInteger bb = (a.multiply(c.b).add(b.multiply(c.a)));
+            BigInteger aa = (a.multiply(c.a).subtract(b.multiply(c.b))).mod(new BigInteger("" + m));
+            BigInteger bb = (a.multiply(c.b).add(b.multiply(c.a))).mod(new BigInteger("" + m));
 
-            return new ComplexNumber(aa.mod(new BigInteger("" + m)), bb.mod(new BigInteger("" + m)));
+            return new ComplexNumber(aa, bb);
 
         }
 
