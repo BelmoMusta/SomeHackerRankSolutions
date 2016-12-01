@@ -21,7 +21,7 @@ public class Solution {
     String un= "11111111111111111111111111";
     
         for (int i = 0; i <= n-1; i++) {
-            res.add(a+(Integer.parseInt(un.substring(0, i+1), 2))*b);
+            res.add(a+  (Integer.parseInt(un.substring(0, i+1), 2))*b);
             
         }
     return res.toString().replace(",", "").replace("[", "").replace("]", "");
