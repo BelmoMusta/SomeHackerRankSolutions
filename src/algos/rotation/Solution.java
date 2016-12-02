@@ -21,10 +21,13 @@ public class Solution {
     static void rotate(int [] tab) {
 
         int tmp = tab[tab.length-1];
-        for (int i = tab.length-2;i>=0 ; i--) {
-            tab[i+1]=tab[i];
+        int i=tab.length-2;
+
+        while(i>=0){
+            tab[i+1]=tab[i--];
 
         }
+
 tab[0]=tmp;
 
 
@@ -57,19 +60,19 @@ int q= sc.nextInt();
 
         System.out.println(Arrays.toString(a));
 
-
+*/
         int[] o = {1,2,3,4};
 
-        for (int i = 0; i < 2*o.length; i++) {
+        for (int i = 0; i < 3; i++) {
             rotate(o);
         }
 
-        rotate(o);
+      //  rotate(o);
 
 
 
         System.out.println(Arrays.toString(o));
-        */
+
 
     }
 
