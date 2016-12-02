@@ -3,9 +3,8 @@
 package algos.rotation;
 
 
-import java.util.Arrays;
-import java.util.Scanner;
-import java.util.Stack;
+import java.util.*;
+
 
 /**
  * Created by DELL on 30/11/2016.
@@ -35,7 +34,7 @@ tab[0]=tmp;
 
 
     public static void main(String[] args) {
-/*
+
         Scanner sc = new Scanner(System.in);
 int n= sc.nextInt();
 int k= sc.nextInt()%n;
@@ -49,7 +48,6 @@ int q= sc.nextInt();
 
         while(k>0){
         rotate(a);
-
         k--;
         }
 
@@ -58,20 +56,13 @@ int q= sc.nextInt();
             q--;
         }
 
-        System.out.println(Arrays.toString(a));
-
-*/
-        int[] o = {1,2,3,4};
-
-        for (int i = 0; i < 3; i++) {
-            rotate(o);
-        }
-
-      //  rotate(o);
 
 
 
-        System.out.println(Arrays.toString(o));
+
+
+
+
 
 
     }
