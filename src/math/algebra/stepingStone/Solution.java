@@ -1,4 +1,4 @@
-package math.algebra;
+package math.algebra.stepingStone;
 
 /**
  * Created by DELL on 07/12/2016.
