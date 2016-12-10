@@ -16,6 +16,7 @@ public class Solution {
         int n=sc.nextInt();
 
         int i=0;
+
          while(++i<=n){
 
 
